@@ -1,1 +1,1 @@
- script that switches the current user to the user betty
+This is my readme file on shell permissions
