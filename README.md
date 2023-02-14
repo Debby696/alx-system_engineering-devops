@@ -1,1 +1,1 @@
-This is readme on shell init variables expansion
+0x03. Shell, init files, variables and expansions
