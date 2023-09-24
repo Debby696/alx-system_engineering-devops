@@ -1,5 +1,5 @@
 0x0B. SSH
-In this project i was able to learn :
+In this project i was able to learn a lot, some of which are:
 What a server is.
 Where servers usually live
 What SSH is
