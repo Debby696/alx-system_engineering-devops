@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 # Configure my Nginx server so /redirect_me is redirecting to another page
 
-sudo apt-get update
+sudo apt-get -y update
 sudo apt-get install -y nginx
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
-string_block="server_name _;\n\tadd_header X-Served-By \$hostname;\n\trewrite ^\/redirect_me https:\/\/meet.google.com permanent;"
-sudo sed -i "s/server_name _;/$string_block/" /etc/nginx/sites-enabled/default
+server_name=$(hostname)
+
+redirect="\\\n\tlocation /redirect_me {\n\t\treturn 301 https://meet.google.com;\n\t}"
+sudo sed -i "55i $redirect"  /etc/nginx/sites-available/default
 
 sudo service nginx restart
