@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """titles of all hot articles for a given subreddit are returned"""
 import requests
 
